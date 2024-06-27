@@ -70,6 +70,8 @@ public:
         comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(1030, 730, 241, 61));
         label1 = new QLabel(centralwidget);
@@ -98,6 +100,8 @@ public:
         comboBox->setItemText(2, QCoreApplication::translate("MainWindow", "\320\224\320\276\320\261\320\260\320\262\320\273\320\265\320\275\320\270\320\265 \321\215\320\273\320\265\320\274\320\265\320\275\321\202\320\260 \320\262 \320\242\320\260\320\261\320\273\320\270\321\206\321\203 2", nullptr));
         comboBox->setItemText(3, QCoreApplication::translate("MainWindow", "\320\237\320\276\320\270\321\201\320\272 \320\277\320\276 \320\275\320\260\320\267\320\262\320\260\320\275\320\270\321\216 \320\262 \320\242\320\260\320\261\320\273\320\270\321\206\320\265 1", nullptr));
         comboBox->setItemText(4, QCoreApplication::translate("MainWindow", "\320\237\320\276\320\270\321\201\320\272 \320\277\320\276 \320\275\320\260\320\267\320\262\320\260\320\275\320\270\321\216 \320\262 \320\242\320\260\320\261\320\273\320\270\321\206\320\265 2", nullptr));
+        comboBox->setItemText(5, QCoreApplication::translate("MainWindow", "\320\222\321\213\320\262\320\265\321\201\321\202\320\270 \320\242\320\260\320\261\320\273\320\270\321\206\321\203 1 \320\262 \321\204\320\260\320\271\320\273", nullptr));
+        comboBox->setItemText(6, QCoreApplication::translate("MainWindow", "\320\222\321\213\320\262\320\265\321\201\321\202\320\270 \320\242\320\260\320\261\320\273\320\270\321\206\321\203 2 \320\262 \321\204\320\260\320\271\320\273", nullptr));
 
         label1->setText(QString());
     } // retranslateUi

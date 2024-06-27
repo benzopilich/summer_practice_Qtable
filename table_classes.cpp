@@ -47,4 +47,9 @@ public:
         in.readLine();
         return in;
     }
+    friend QTextStream& operator <<(QTextStream& out,Tab2& obj)
+    {
+        out<<obj.Name<<"\n"<<obj.Cost<<" "<<obj.Year<<"\n";
+        return out;
+    }
 };

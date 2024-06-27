@@ -177,6 +177,72 @@ void MainWindow::on_pushButton_clicked()
         }
         ui->label1->setFont(QFont("Times New Roman", 15, QFont::Bold));
     }
+    if(Index==5)
+    {
+        vector<Tab1>res;
+        for(int i=0;i<ui->tableView->model()->rowCount();i++)
+        {
+            Tab1 t;
+            QModelIndex ind=ui->tableView->model()->index(i,0);
+            QVariant cellValue=ind.data();
+            QString temp=cellValue.toString();
+            t.Month=temp;
+            QModelIndex ind1=ui->tableView->model()->index(i,1);
+            QVariant cellValue1=ind1.data();
+            int temp1=cellValue1.toInt();
+            t.Day=temp1;
+            res.push_back(t);
+        }
+        QFile oup("Tabel_1.txt");
+        if(oup.open(QIODevice::WriteOnly))
+        {
+            QTextStream out(&oup);
+            for(int i=0;i<ui->tableView->model()->rowCount();i++)
+            {
+                out<<res[i];
+            }
+            oup.close();
+        }
+        else
+        {
+            cout<<"Error_Out1";
+        }
+    }
+    if(Index==6)
+    {
+        vector<Tab2>res;
+        for(int i=0;i<ui->tableView2->model()->rowCount();i++)
+        {
+            Tab2 t;
+            QModelIndex ind=ui->tableView2->model()->index(i,0);
+            QVariant cellValue=ind.data();
+            QString temp=cellValue.toString();
+            t.Name=temp;
+            QModelIndex ind1=ui->tableView2->model()->index(i,1);
+            QVariant cellValue1=ind1.data();
+            double temp1=cellValue1.toDouble();
+            t.Cost=temp1;
+            QModelIndex ind2=ui->tableView2->model()->index(i,2);
+            QVariant cellValue2=ind2.data();
+            int temp2=cellValue2.toInt();
+            t.Year=temp2;
+            res.push_back(t);
+        }
+        QFile oup("Tabel_2.txt");
+        if(oup.open(QIODevice::WriteOnly))
+        {
+            QTextStream out(&oup);
+            for(int i=0;i<ui->tableView2->model()->rowCount();i++)
+            {
+                out<<res[i];
+            }
+            oup.close();
+        }
+        else
+        {
+            cout<<"Error_Out2";
+        }
+    }
 }
 
 
@@ -226,6 +292,24 @@ void MainWindow::on_comboBox_activated(int index)
         ui->text3->setVisible(false);
         ui->pushButton->setVisible(true);
         ui->label1->setVisible(true);
+    }
+    if(index==5)
+    {
+        Index=index;
+        ui->text1->setVisible(false);
+        ui->text2->setVisible(false);
+        ui->text3->setVisible(false);
+        ui->pushButton->setVisible(true);
+        ui->label1->setVisible(false);
+    }
+    if(index==6)
+    {
+        Index=index;
+        ui->text1->setVisible(false);
+        ui->text2->setVisible(false);
+        ui->text3->setVisible(false);
+        ui->pushButton->setVisible(true);
+        ui->label1->setVisible(false);
     }
 }
 

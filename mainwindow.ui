@@ -111,6 +111,16 @@
       <string>Поиск по названию в Таблице 2</string>
      </property>
     </item>
+    <item>
+     <property name="text">
+      <string>Вывести Таблицу 1 в файл</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Вывести Таблицу 2 в файл</string>
+     </property>
+    </item>
    </widget>
    <widget class="QLabel" name="label1">
     <property name="geometry">
