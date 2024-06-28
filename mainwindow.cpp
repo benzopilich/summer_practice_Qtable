@@ -99,7 +99,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    if(Index==1)
+    if(Index==1)//Добавление в Таблицу 1
     {
         ui->tableView->model()->insertRow(ui->tableView->model()->rowCount());
         QString M=ui->text1->text();
@@ -107,7 +107,7 @@ void MainWindow::on_pushButton_clicked()
         model->setItem(ui->tableView->model()->rowCount()-1,0,new QStandardItem(M));
         model->setItem(ui->tableView->model()->rowCount()-1,1,new QStandardItem(QString::number(D)));
     }
-    if(Index==2)
+    if(Index==2)//Добавление в Таблицу 2
     {
         ui->tableView2->model()->insertRow(ui->tableView2->model()->rowCount());
         QString N=ui->text1->text();
@@ -117,7 +117,7 @@ void MainWindow::on_pushButton_clicked()
         model2->setItem(ui->tableView2->model()->rowCount()-1,1,new QStandardItem(QString::number(C)));
         model2->setItem(ui->tableView2->model()->rowCount()-1,2,new QStandardItem(QString::number(Y)));
     }
-    if(Index==3)
+    if(Index==3)//Поиск в Таблице 1
     {
         QString q=ui->text1->text();
         bool f=false;
@@ -145,7 +145,7 @@ void MainWindow::on_pushButton_clicked()
         }
         ui->label1->setFont(QFont("Times New Roman", 15, QFont::Bold));
     }
-    if(Index==4)
+    if(Index==4)//Поиск в Таблице 2
     {
         QString q=ui->text1->text();
         bool f=false;
@@ -177,7 +177,7 @@ void MainWindow::on_pushButton_clicked()
         }
         ui->label1->setFont(QFont("Times New Roman", 15, QFont::Bold));
     }
-    if(Index==5)
+    if(Index==5)//Вывод в файл из Таблицы 1
     {
         vector<Tab1>res;
         for(int i=0;i<ui->tableView->model()->rowCount();i++)
@@ -208,7 +208,7 @@ void MainWindow::on_pushButton_clicked()
             cout<<"Error_Out1";
         }
     }
-    if(Index==6)
+    if(Index==6)//Вывод в файл из Таблицы 2
     {
         vector<Tab2>res;
         for(int i=0;i<ui->tableView2->model()->rowCount();i++)
@@ -243,7 +243,7 @@ void MainWindow::on_pushButton_clicked()
             cout<<"Error_Out2";
         }
     }
-    if(Index==7)
+    if(Index==7)//Сортировка в Таблице 1
     {
         Tab1_help T;
         Tab1 tab1;
@@ -266,7 +266,7 @@ void MainWindow::on_pushButton_clicked()
             model->setItem(i,1,new QStandardItem(QString::number(T.T1[i].Day)));
         }
     }
-    if(Index==8)
+    if(Index==8)//Сортировка в Таблице 2
     {
         Tab2_help T;
         Tab2 tab2;
