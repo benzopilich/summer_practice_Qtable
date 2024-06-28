@@ -43,13 +43,13 @@ public:
     }
     friend QTextStream& operator <<(QTextStream& out,Tab1_help& obj)
     {
-        for(int i=0; i<obj.T1.size(); i++)
+        for(unsigned i=0; i<obj.T1.size(); i++)
         {
             out<<obj.T1[i];
         }
         return out;
     }
-    mySort()
+    void mySort()
     {
         sort(T1.begin(),T1.end(),[&](const Tab1& t1,const Tab1& t2){
             return t1.Month<t2.Month;
@@ -101,13 +101,13 @@ public:
     }
     friend QTextStream& operator <<(QTextStream& out,Tab2_help& obj)
     {
-        for(int i=0; i<obj.T2.size(); i++)
+        for(unsigned i=0; i<obj.T2.size(); i++)
         {
             out<<obj.T2[i];
         }
         return out;
     }
-    mySort()
+    void mySort()
     {
         sort(T2.begin(),T2.end(),[&](const Tab2& t1,const Tab2& t2){
             return t1.Name<t2.Name;
