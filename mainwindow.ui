@@ -37,9 +37,9 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>810</x>
-      <y>740</y>
-      <width>80</width>
+      <x>820</x>
+      <y>670</y>
+      <width>75</width>
       <height>24</height>
      </rect>
     </property>
@@ -50,45 +50,45 @@
    <widget class="QLineEdit" name="text1">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>740</y>
+      <x>660</x>
+      <y>650</y>
       <width>113</width>
-      <height>24</height>
+      <height>22</height>
      </rect>
     </property>
    </widget>
    <widget class="QLineEdit" name="text2">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>790</y>
+      <x>660</x>
+      <y>700</y>
       <width>113</width>
-      <height>24</height>
+      <height>22</height>
      </rect>
     </property>
    </widget>
    <widget class="QLineEdit" name="text3">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>840</y>
+      <x>660</x>
+      <y>750</y>
       <width>113</width>
-      <height>24</height>
+      <height>22</height>
      </rect>
     </property>
    </widget>
    <widget class="QComboBox" name="comboBox">
     <property name="geometry">
      <rect>
-      <x>1030</x>
-      <y>730</y>
-      <width>241</width>
+      <x>970</x>
+      <y>650</y>
+      <width>291</width>
       <height>61</height>
      </rect>
     </property>
     <item>
      <property name="text">
-      <string>Выберите опцию</string>
+      <string>Выберите элемент</string>
      </property>
     </item>
     <item>
@@ -113,12 +113,22 @@
     </item>
     <item>
      <property name="text">
-      <string>Вывести Таблицу 1 в файл</string>
+      <string>Вывести в файл Таблицу 1</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Вывести Таблицу 2 в файл</string>
+      <string>Вывести в файл Таблицу 2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Сортировать Таблицу 1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Сортировка Таблицу 2</string>
      </property>
     </item>
    </widget>
@@ -126,9 +136,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>740</y>
-      <width>561</width>
-      <height>151</height>
+      <y>690</y>
+      <width>411</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
@@ -142,7 +152,7 @@
      <x>0</x>
      <y>0</y>
      <width>1443</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

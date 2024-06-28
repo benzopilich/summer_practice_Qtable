@@ -243,6 +243,57 @@ void MainWindow::on_pushButton_clicked()
             cout<<"Error_Out2";
         }
     }
+    if(Index==7)
+    {
+        Tab1_help T;
+        Tab1 tab1;
+        for(int i=0;i<ui->tableView->model()->rowCount();i++)
+        {
+            QModelIndex ind=ui->tableView->model()->index(i,0);
+            QVariant cellValue=ind.data();
+            QString temp=cellValue.toString();
+            tab1.Month=temp;
+            QModelIndex ind1=ui->tableView->model()->index(i,1);
+            QVariant cellValue1=ind1.data();
+            int temp1=cellValue1.toInt();
+            tab1.Day=temp1;
+            T.T1.push_back(tab1);
+        }
+        T.mySort();
+        for(int i=0;i<ui->tableView->model()->rowCount();i++)
+        {
+            model->setItem(i,0,new QStandardItem(T.T1[i].Month));
+            model->setItem(i,1,new QStandardItem(QString::number(T.T1[i].Day)));
+        }
+    }
+    if(Index==8)
+    {
+        Tab2_help T;
+        Tab2 tab2;
+        for(int i=0;i<ui->tableView2->model()->rowCount();i++)
+        {
+            QModelIndex ind=ui->tableView2->model()->index(i,0);
+            QVariant cellValue=ind.data();
+            QString temp=cellValue.toString();
+            tab2.Name=temp;
+            QModelIndex ind1=ui->tableView2->model()->index(i,1);
+            QVariant cellValue1=ind1.data();
+            double temp1=cellValue1.toDouble();
+            tab2.Cost=temp1;
+            QModelIndex ind2=ui->tableView2->model()->index(i,2);
+            QVariant cellValue2=ind2.data();
+            int temp2=cellValue2.toInt();
+            tab2.Year=temp2;
+            T.T2.push_back(tab2);
+        }
+        T.mySort();
+        for(int i=0;i<ui->tableView2->model()->rowCount();i++)
+        {
+            model2->setItem(i,0,new QStandardItem(T.T2[i].Name));
+            model2->setItem(i,1,new QStandardItem(QString::number(T.T2[i].Cost)));
+            model2->setItem(i,2,new QStandardItem(QString::number(T.T2[i].Year)));
+        }
+    }
 }
 
 
@@ -303,6 +354,24 @@ void MainWindow::on_comboBox_activated(int index)
         ui->label1->setVisible(false);
     }
     if(index==6)
+    {
+        Index=index;
+        ui->text1->setVisible(false);
+        ui->text2->setVisible(false);
+        ui->text3->setVisible(false);
+        ui->pushButton->setVisible(true);
+        ui->label1->setVisible(false);
+    }
+    if(index==7)
+    {
+        Index=index;
+        ui->text1->setVisible(false);
+        ui->text2->setVisible(false);
+        ui->text3->setVisible(false);
+        ui->pushButton->setVisible(true);
+        ui->label1->setVisible(false);
+    }
+    if(index==8)
     {
         Index=index;
         ui->text1->setVisible(false);
