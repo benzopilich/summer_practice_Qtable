@@ -131,6 +131,16 @@
       <string>Сортировка Таблицу 2</string>
      </property>
     </item>
+    <item>
+     <property name="text">
+      <string>Удалить строку по номеру из Таблицы 1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Удалить строку по номеру из Таблицы 2</string>
+     </property>
+    </item>
    </widget>
    <widget class="QLabel" name="label1">
     <property name="geometry">
@@ -152,7 +162,7 @@
      <x>0</x>
      <y>0</y>
      <width>1443</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

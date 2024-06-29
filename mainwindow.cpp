@@ -294,6 +294,34 @@ void MainWindow::on_pushButton_clicked()
             model2->setItem(i,2,new QStandardItem(QString::number(T.T2[i].Year)));
         }
     }
+    if(Index==9)//Удаление строки из Таблицы 1
+    {
+        int i=ui->text1->text().toInt();
+        if(i<1 || i>ui->tableView->model()->rowCount())
+        {
+            ui->label1->setText("The row not exist.");
+        }
+        else
+        {
+            ui->tableView->model()->removeRow(i-1);
+            ui->label1->setText("Deleted.");
+        }
+        ui->label1->setFont(QFont("Times New Roman", 15, QFont::Bold));
+    }
+    if(Index==10)//Удаление строки из Таблицы 2
+    {
+        int i=ui->text1->text().toInt();
+        if(i<1 || i>ui->tableView2->model()->rowCount())
+        {
+            ui->label1->setText("The row not exist.");
+        }
+        else
+        {
+            ui->tableView2->model()->removeRow(i-1);
+            ui->label1->setText("Deleted.");
+        }
+        ui->label1->setFont(QFont("Times New Roman", 15, QFont::Bold));
+    }
 }
 
 
@@ -379,6 +407,24 @@ void MainWindow::on_comboBox_activated(int index)
         ui->text3->setVisible(false);
         ui->pushButton->setVisible(true);
         ui->label1->setVisible(false);
+    }
+    if(index==9)
+    {
+        Index=index;
+        ui->text1->setVisible(true);
+        ui->text2->setVisible(false);
+        ui->text3->setVisible(false);
+        ui->pushButton->setVisible(true);
+        ui->label1->setVisible(true);
+    }
+    if(index==10)
+    {
+        Index=index;
+        ui->text1->setVisible(true);
+        ui->text2->setVisible(false);
+        ui->text3->setVisible(false);
+        ui->pushButton->setVisible(true);
+        ui->label1->setVisible(true);
     }
 }
 
